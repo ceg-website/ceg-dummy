@@ -1,0 +1,21 @@
+<h1> welcome to ceg.annauniv.edu </h1>
+
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>short desciripton</th>
+<th> author</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.sdesc %></td>
+      <td><%= image_tag article.fimage.url(:thumb) %></td>
+
+  </tr>
+  <% end %>
+</table>
+<%= raw(blog_feed) %>
