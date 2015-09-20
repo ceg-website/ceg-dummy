@@ -1,0 +1,2 @@
+module StaffnewsHelper
+end

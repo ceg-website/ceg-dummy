@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920081716) do
+ActiveRecord::Schema.define(version: 20150920081721) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -45,6 +45,58 @@ ActiveRecord::Schema.define(version: 20150920081716) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
+  create_table "clubs", force: :cascade do |t|
+    t.string   "cname"
+    t.integer  "cid"
+    t.text     "cbody"
+    t.text     "extra"
+    t.string   "cimage_file_name"
+    t.string   "cimage_content_type"
+    t.integer  "cimage_file_size"
+    t.datetime "cimage_updated_at"
+    t.string   "clink"
+    t.string   "slug"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "clubs", ["slug"], name: "index_clubs_on_slug", unique: true
+
+  create_table "departments", force: :cascade do |t|
+    t.string   "dname"
+    t.integer  "did"
+    t.text     "body"
+    t.text     "extra1"
+    t.string   "dimage_file_name"
+    t.string   "dimage_content_type"
+    t.integer  "dimage_file_size"
+    t.datetime "dimage_updated_at"
+    t.string   "dlink"
+    t.string   "slug"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "departments", ["slug"], name: "index_departments_on_slug", unique: true
+
+  create_table "researches", force: :cascade do |t|
+    t.string   "rname"
+    t.integer  "rid"
+    t.text     "rbody"
+    t.text     "rextra"
+    t.string   "rimage_file_name"
+    t.string   "rimage_content_type"
+    t.integer  "rimage_file_size"
+    t.datetime "rimage_updated_at"
+    t.string   "rlink"
+    t.string   "slug"
+    t.string   "rauthor"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "researches", ["slug"], name: "index_researches_on_slug", unique: true
+
   create_table "slugs", force: :cascade do |t|
     t.integer  "sluggable_id",                              null: false
     t.string   "sluggable_type",                            null: false
@@ -56,6 +108,20 @@ ActiveRecord::Schema.define(version: 20150920081716) do
 
   add_index "slugs", ["sluggable_type", "scope", "slug"], name: "slugs_unique", unique: true
   add_index "slugs", ["sluggable_type", "sluggable_id", "active"], name: "slugs_for_record"
+
+  create_table "staffnews", force: :cascade do |t|
+    t.string   "stnews"
+    t.integer  "stid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "studentnews", force: :cascade do |t|
+    t.string   "stnews"
+    t.integer  "stid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

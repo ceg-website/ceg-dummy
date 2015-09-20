@@ -20,7 +20,36 @@ config.model Article do
 		field :sdesc, :text
 		field :author, :string
 		field :body, :ck_editor
+		field :fimage, :paperclip
 	end
+end
+config.model Department do
+  edit do
+    field :dname, :string
+    field :dlink, :string
+    field :did, :integer
+    field :body, :ck_editor
+    field :dimage, :paperclip
+  end
+end
+config.model Research do
+  edit do
+    field :rname, :string
+    field :rlink, :string
+    field :rauthor, :string
+    field :rid, :integer
+    field :rbody, :ck_editor
+    field :rimage, :paperclip
+  end
+end
+config.model Club do
+  edit do
+    field :cname, :string
+    field :clink, :string
+    field :cid, :integer
+    field :cbody, :ck_editor
+    field :cimage, :paperclip
+  end
 end
   ## == Cancan ==
   # config.authorize_with :cancan

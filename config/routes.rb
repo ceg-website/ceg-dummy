@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/ctfadmin', as: 'rails_admin'
+  resources :studentnews
+  resources :staffnews
+  resources :researches
+  resources :clubs
+  resources :departments
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   get 'welcome/index'

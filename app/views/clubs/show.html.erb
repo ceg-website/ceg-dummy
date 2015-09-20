@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cname:</strong>
+  <%= @club.cname %>
+</p>
+
+<p>
+  <strong>Cid:</strong>
+  <%= @club.cid %>
+</p>
+
+<p>
+  <strong>Cbody:</strong>
+  <%= @club.cbody %>
+</p>
+
+<p>
+  <strong>Extra:</strong>
+  <%= @club.extra %>
+</p>
+
+<p>
+  <strong>Cimage:</strong>
+  <%= image_tag @club.cimage.url %>
+</p>
+
+<p>
+  <strong>Clink:</strong>
+  <%= @club.clink %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @club.slug %>
+</p>
+
+<%= link_to 'Edit', edit_club_path(@club) %> |
+<%= link_to 'Back', clubs_path %>

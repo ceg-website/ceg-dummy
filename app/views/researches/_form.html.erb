@@ -1,0 +1,49 @@
+<%= form_for(@research) do |f| %>
+  <% if @research.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@research.errors.count, "error") %> prohibited this research from being saved:</h2>
+
+      <ul>
+      <% @research.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rname %><br>
+    <%= f.text_field :rname %>
+  </div>
+  <div class="field">
+    <%= f.label :rid %><br>
+    <%= f.number_field :rid %>
+  </div>
+  <div class="field">
+    <%= f.label :rbody %><br>
+    <%= f.text_area :rbody %>
+  </div>
+  <div class="field">
+    <%= f.label :rextra %><br>
+    <%= f.text_area :rextra %>
+  </div>
+  <div class="field">
+    <%= f.label :rimage %><br>
+    <%= f.text_field :rimage %>
+  </div>
+  <div class="field">
+    <%= f.label :rlink %><br>
+    <%= f.text_field :rlink %>
+  </div>
+  <div class="field">
+    <%= f.label :slug %><br>
+    <%= f.text_field :slug %>
+  </div>
+  <div class="field">
+    <%= f.label :rauthor %><br>
+    <%= f.text_field :rauthor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

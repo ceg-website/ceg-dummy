@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dname: MyString
+  did: 1
+  body: MyText
+  extra1: MyText
+  dimage: 
+  dlink: MyString
+  slug: MyString
+
+two:
+  dname: MyString
+  did: 1
+  body: MyText
+  extra1: MyText
+  dimage: 
+  dlink: MyString
+  slug: MyString

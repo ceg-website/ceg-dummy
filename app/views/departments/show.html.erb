@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dname:</strong>
+  <%= @department.dname %>
+</p>
+
+<p>
+  <strong>Did:</strong>
+  <%= @department.did %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @department.body %>
+</p>
+
+<p>
+  <strong>Extra1:</strong>
+  <%= @department.extra1 %>
+</p>
+
+<p>
+  <strong>Dimage:</strong>
+  <%= image_tag @department.dimage.url %>
+</p>
+
+<p>
+  <strong>Dlink:</strong>
+  <%= @department.dlink %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @department.slug %>
+</p>
+
+<%= link_to 'Edit', edit_department_path(@department) %> |
+<%= link_to 'Back', departments_path %>

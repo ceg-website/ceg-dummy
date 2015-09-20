@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stnews:</strong>
+  <%= @staffnews.stnews %>
+</p>
+
+<p>
+  <strong>Stid:</strong>
+  <%= @staffnews.stid %>
+</p>
+
+<%= link_to 'Edit', edit_staffnews_path(@staffnews) %> |
+<%= link_to 'Back', staffnews_index_path %>

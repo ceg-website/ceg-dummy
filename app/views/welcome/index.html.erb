@@ -1,12 +1,39 @@
 <h1> welcome to ceg.annauniv.edu </h1>
 
-<h1>Listing articles</h1>
+//dummy entry for thiruikural and todays quote as of now
+
+// newsletter just put it and leave i ll configure with mailchimp and ajax
+
+<H3> //THE CAROUSEL </H3>
+
+<ul>
+<% @staffnews.each do |stnews| %>
+  <li><%= raw(stnews.stnews) %></li>
+<% end %>
+</ul>  
+
+
+<H3> //THE STAFFNEWS </H3>
+
+<ul>
+<% @studentnews.each do |stnews| %>
+  <li><%= raw(stnews.stnews) %></li>
+<% end %>
+</ul>  
+
+<H3> //THE GTNEWS </H3>
+
+
+<%= raw(blog_feed) %>
+
+
+<h1> // Listing articles</h1>
 
 <table>
   <tr>
     <th>Title</th>
     <th>short desciripton</th>
-<th> author</th>
+<th> IMAGE</th>
   </tr>
 
   <% @articles.each do |article| %>
@@ -18,4 +45,10 @@
   </tr>
   <% end %>
 </table>
-<%= raw(blog_feed) %>
+
+<BR/>
+
+<BR/>
+<BR/>
+// HARD CODE CONTACT INFO :)
+

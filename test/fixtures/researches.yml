@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rname: MyString
+  rid: 1
+  rbody: MyText
+  rextra: MyText
+  rimage: 
+  rlink: MyString
+  slug: MyString
+  rauthor: MyString
+
+two:
+  rname: MyString
+  rid: 1
+  rbody: MyText
+  rextra: MyText
+  rimage: 
+  rlink: MyString
+  slug: MyString
+  rauthor: MyString

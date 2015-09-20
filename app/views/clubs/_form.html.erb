@@ -1,0 +1,45 @@
+<%= form_for(@club) do |f| %>
+  <% if @club.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@club.errors.count, "error") %> prohibited this club from being saved:</h2>
+
+      <ul>
+      <% @club.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cname %><br>
+    <%= f.text_field :cname %>
+  </div>
+  <div class="field">
+    <%= f.label :cid %><br>
+    <%= f.number_field :cid %>
+  </div>
+  <div class="field">
+    <%= f.label :cbody %><br>
+    <%= f.text_area :cbody %>
+  </div>
+  <div class="field">
+    <%= f.label :extra %><br>
+    <%= f.text_area :extra %>
+  </div>
+  <div class="field">
+    <%= f.label :cimage %><br>
+    <%= f.text_field :cimage %>
+  </div>
+  <div class="field">
+    <%= f.label :clink %><br>
+    <%= f.text_field :clink %>
+  </div>
+  <div class="field">
+    <%= f.label :slug %><br>
+    <%= f.text_field :slug %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
