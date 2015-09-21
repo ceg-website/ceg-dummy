@@ -8,6 +8,7 @@ gem 'paper_trail', '~> 4.0.0'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'rails_admin'
 gem "cancancan"
+gem 'nprogress-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record

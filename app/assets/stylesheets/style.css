@@ -1,0 +1,319 @@
+body{
+	height: 100%;
+}
+
+.logo{
+	height: 75px;
+	padding: 5px 20px;
+	text-align: center;
+}
+
+.inner_head{
+	display: inline;
+	position: relative;
+	height: 100%;
+	
+
+}
+
+.head1{
+
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+.sticky{
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position: sticky;
+	top: 0px;
+	z-index: 1000;
+}
+
+
+.iconn{
+	height: 60px;
+	vertical-align: center;
+	padding-bottom: 20px;
+}
+
+.au{
+	padding-top: 15px;
+}
+
+.first_row{
+	padding-top: 50px;
+}
+
+.nav_markup{
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.car_markup{
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 0px;
+	width: 100%;
+}
+
+.car_markup .car_overlay{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%; 
+	height:100%;
+	background:#576276;
+	opacity:0.7;
+	z-index: 10;
+} 
+
+
+.cap_markup{
+
+	position: absolute;
+	left: 100px;
+	bottom: 75px;
+	z-index: 50;
+	text-align: left;
+}
+.ind_markup{
+
+	position: absolute;
+	left: 200px;
+	bottom: 5px;
+	z-index: 25;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+       
+}
+.carousel-indicators .active {
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    
+    background-color: #fbc912;
+}
+
+.first_but{
+	border-top: none;
+	border-radius: 0px;
+
+}
+.stamp, .stamp-logo{
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	height: 60px;
+
+}
+.stamp{
+	border: 1px solid #DDD;
+	border-bottom: none;
+
+}
+
+.stamp h4{
+	color: #f8cb10;
+	font-weight: bold;
+}
+
+.stamp h6{
+	color: red;
+}
+
+.stamp-logo{
+	border-bottom: 1px solid #DDD;
+}
+.head-grp{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+
+
+}
+
+.but-grp{
+	padding-top: 0px;
+	margin-top: 0px;
+}
+.news_header{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.sub_but{
+	background-color: #1bbc9b;
+	color: white;
+	margin-top: 30px;
+}
+.sub_but:hover{
+	background-color: #34cdaf;
+	color: white;
+}
+
+.first_row{
+	margin-top: 30px;
+}
+
+
+
+
+.quick-links li{
+	padding: 5px;
+	color:#2dcc6f;
+}
+.quick-links li:nth-child(odd){
+	background: #CCC;
+}
+
+.quick-links li:nth-child(even){
+	background: #FFF;
+}
+
+.quick-links a{
+	text-decoration: none;
+	color: black;
+}
+
+.quick-links a:hover{
+	text-decoration: none;
+	color: black;
+}
+
+.auth-name{
+	padding-right: 5px;
+	font-weight: bold;
+	color: #dc8615;
+
+
+}
+
+.topic{
+	color: #859094;
+}
+
+tr:hover{
+	border-left: 5px solid #8f44ad;
+}
+
+.link-block{
+	height: 360px;
+}
+
+
+.gt-links{
+	border: 1px solid #dde1e2;
+}
+
+
+.blog-links{
+	padding-top: 30px;
+	margin-bottom: 30px;
+	
+
+}
+
+.bg-link{
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.img_overlay{
+	position: absolute;
+	height: 100px;
+	width: 300px;
+	bottom: 20px;
+	left: 15px;
+	background-color: #1fb298;
+	opacity: 0.7;
+	z-index: 20;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	overflow: hidden;
+
+	
+}
+
+.img_overlay:hover{
+	position: absolute;
+	height: 200px;
+	width: 300px;
+	bottom: 20px;
+	left: 15px;
+	background-color: #1fb298;
+	opacity: 0.7;
+	z-index: 20;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+	
+}
+
+.img_overlay h4{
+	font-weight: bold;
+	z-index: 25;
+}
+.rd-more{
+	margin-top: 50px;
+	z-index: 30;
+}
+
+.rd-but{
+	background-color: #1fb298;
+	color: white;
+	opacity: 0.7;
+	border: 1px solid white;
+	border-radius: 2px;
+	z-index: 35;
+
+
+
+}
+
+.rd-but:hover{
+	background-color: #63cdb7;
+	opacity: 0.7;
+	color: white;
+	border: 1px solid white;
+	border-radius: 2px;
+
+
+
+}
+
+#footer {
+	margin-top: 30px;
+  	height: 100px;
+  	background-color: #f5f5f5;
+}
+.footer-line{
+	height: 5px;
+	width:100%;
+	background-color: #34495e;
+
+}
+
+
+.footer-con{
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
