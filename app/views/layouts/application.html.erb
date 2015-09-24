@@ -2,12 +2,7 @@
 <html>
 <head>
   <title></title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-   <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'style_nav', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'nanobar', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +10,12 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+   <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'style_nav', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'nanobar', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
   <script>
   var options = {
   bg: '#acf',
@@ -23,6 +24,33 @@
   // id for new nanobar
   id: 'myDivId'
 };
+$('.Scrollable').on('DOMMouseScroll mousewheel', function(ev) {
+    var $this = $(this),
+        scrollTop = this.scrollTop,
+        scrollHeight = this.scrollHeight,
+        height = $this.height(),
+        delta = (ev.type == 'DOMMouseScroll' ?
+            ev.originalEvent.detail * -40 :
+            ev.originalEvent.wheelDelta),
+        up = delta > 0;
+
+    var prevent = function() {
+        ev.stopPropagation();
+        ev.preventDefault();
+        ev.returnValue = false;
+        return false;
+    }
+
+    if (!up && -delta > scrollHeight - height - scrollTop) {
+        // Scrolling down, but this will take us past the bottom.
+        $this.scrollTop(scrollHeight);
+        return prevent();
+    } else if (up && delta > scrollTop) {
+        // Scrolling up, but this will take us past the top.
+        $this.scrollTop(0);
+        return prevent();
+    }
+});
 
 var nanobar = new Nanobar( options );
 
@@ -34,7 +62,7 @@ nanobar.go(100);
   </script>
 </head>
 <body>
-
+<div class='Scrollable'>
     <div class="container-fluid">
       <div id="myDivId"><br></div>
       <div class = "row" >
@@ -60,7 +88,7 @@ nanobar.go(100);
       </div>
   </div>
     
-      <nav class="navbar1 navbar-default1 sticky col-md-12 nav_markup" role="navigation">
+      <nav class="navbar navbar-default sticky col-md-12 nav_markup" role="navigation">
         <div class="navbar-header">
            
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
