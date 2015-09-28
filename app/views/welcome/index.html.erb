@@ -1,4 +1,7 @@
-<div class="carousel slide col-md-12 car_markup" id="carousel-834021">
+
+
+
+<div class="carousel slide col-md-12 car_markup" id="carousel-834021" data-ride="carousel">
           <div class="car_overlay">
           </div>
           <ol class="carousel-indicators ind_markup">
@@ -94,7 +97,7 @@
         </form>
       </div>
     </div>
-<div class="row">
+    <div class="row">
       
           <div class="col-md-4 col-xs-12">
               <div class="caption">
@@ -111,12 +114,13 @@
                       </center>
                   </div>
                   <div class="col-md-6 col-xs-6 stamp-logo">
-                    <span><center><img class="iconn"src = "assets/announcement-icon.png"/></center></span>
+                    <span><center><img class="iconn"src = "/assets/announcement-icon.png"/></center></span>
                     
                   </div>
                 </div>
                 <div class="list-group but-grp">
-                  <% @staffnews.each do |stnews| %>
+                <button type="button" class="list-group-item first_but"><%= raw(@staffnews.first.stnews) %></button>
+                  <% @staffnews.where.not(id: @staffnews.first.id).each do |stnews| %>
                     <button type="button" class="list-group-item "><%= raw(stnews.stnews) %></button>
                   <% end %>
                 </div>
@@ -141,13 +145,17 @@
                       </center>
                   </div>
                   <div class="col-md-6 col-xs-6 stamp-logo">
-                    <span><center><img class="iconn"src = "Images/announcement-icon.png"/></center></span>
+                    <span><center><img class="iconn"src = "/assets/announcement-icon.png"/></center></span>
                     
                   </div>
                 </div>
                 <div class="list-group but-grp">
-                  <% @studentnews.each do |stnews| %>
-                    <button type="button" class="list-group-item "><%= raw(stnews.stnews) %></button>
+
+                  
+                    <button type="button" class="list-group-item first_but"><%= raw(@studentnews.first.stnews) %></button>
+                  
+                  <% @studentnews.where.not(id: @studentnews.first.id).each do |stnews| %>
+                    <button type="button" class="list-group-item"><%= raw(stnews.stnews) %></button>
                   <% end %>
                 </div>
                 <p>
@@ -166,7 +174,7 @@
                 <div class="row head-grp">
                 </div>
                 <div class="list-group but-grp">
-                  <button type="button" class="list-group-item  first_but"><strong class="caret"></strong> Cras justo odio</button>
+                  <button type="button" class="list-group-item"><strong class="caret"></strong> Cras justo odio</button>
                   <button type="button" class="list-group-item"><strong class="caret"></strong> Dapibus ac facilisis in</button>
                   <button type="button" class="list-group-item"><strong class="caret"></strong> Morbi leo risus</button>
                   <button type="button" class="list-group-item"><strong class="caret"></strong> Porta ac consectetur ac</button>
@@ -182,7 +190,7 @@
         
       
     </div>
-<div class="row">
+    <div class="row">
       
       <div class="col-md-12 gt-links">
         <h3>Inside the Campus</h3>
@@ -195,7 +203,7 @@
       </div>
     </div>
 
-<div class="row">
+    <div class="row">
       <div class="col-md-12">
         <center>
         <h2>
@@ -211,7 +219,8 @@
     <div class="blog-links">
       <div class="col-md-4 bg-link">
       
-        <img alt="Bootstrap Image Preview" src="assets/200.jpeg">
+        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
+        
         <div class="img_overlay">
           <h4>Kurukshetra</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
@@ -226,7 +235,7 @@
       </div>
       <div class="col-md-4 bg-link">
       
-        <img alt="Bootstrap Image Preview" src="assets/200.jpeg">
+        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
         <div class="img_overlay">
           <h4>Kurukshetra</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
@@ -241,7 +250,7 @@
       </div>
       <div class="col-md-4 bg-link">
       
-        <img alt="Bootstrap Image Preview" src="assets/200.jpeg">
+        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
         <div class="img_overlay">
           <h4>Kurukshetra</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
@@ -256,7 +265,7 @@
       </div>
       <div class="col-md-4 bg-link">
       
-        <img alt="Bootstrap Image Preview" src="assets/200.jpeg">
+        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
         <div class="img_overlay">
           <h4>Kurukshetra</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
@@ -271,7 +280,7 @@
       </div>
       <div class="col-md-4 bg-link">
       
-        <img alt="Bootstrap Image Preview" src="assets/200.jpeg">
+        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
         <div class="img_overlay">
           <h4>Kurukshetra</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
@@ -286,7 +295,7 @@
       </div>
       <div class="col-md-4 bg-link">
       
-        <img alt="Bootstrap Image Preview" src="assets/200.jpeg">
+        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
         <div class="img_overlay">
           <h4>Kurukshetra</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
@@ -301,7 +310,7 @@
       </div>
     </div>
     </div>
-
+<!--
 <h1> // Listing articles</h1>
 
 <table>
@@ -320,15 +329,7 @@
   </tr>
   <% end %>
 </table>
-
-    <div id="footer">
-      <div class="footer-line">
-        
-      </div>
-        <div class="footer-con">
-            <p class="text-muted credit">Copyrights 2015, College of Engnineering Guindy</p>
-          </div>
-      </div>
+-->
     
 
    

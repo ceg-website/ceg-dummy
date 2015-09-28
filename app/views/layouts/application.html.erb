@@ -13,6 +13,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
    <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag    'style_nav', media: 'all', 'data-turbolinks-track' => true %>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'nanobar', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -24,33 +25,12 @@
   // id for new nanobar
   id: 'myDivId'
 };
-$('.Scrollable').on('DOMMouseScroll mousewheel', function(ev) {
-    var $this = $(this),
-        scrollTop = this.scrollTop,
-        scrollHeight = this.scrollHeight,
-        height = $this.height(),
-        delta = (ev.type == 'DOMMouseScroll' ?
-            ev.originalEvent.detail * -40 :
-            ev.originalEvent.wheelDelta),
-        up = delta > 0;
 
-    var prevent = function() {
-        ev.stopPropagation();
-        ev.preventDefault();
-        ev.returnValue = false;
-        return false;
-    }
 
-    if (!up && -delta > scrollHeight - height - scrollTop) {
-        // Scrolling down, but this will take us past the bottom.
-        $this.scrollTop(scrollHeight);
-        return prevent();
-    } else if (up && delta > scrollTop) {
-        // Scrolling up, but this will take us past the top.
-        $this.scrollTop(0);
-        return prevent();
-    }
-});
+
+
+
+
 
 var nanobar = new Nanobar( options );
 
@@ -62,23 +42,26 @@ nanobar.go(100);
   </script>
 </head>
 <body>
-<div class='Scrollable'>
-    <div class="container-fluid">
+
+    <div class="container-fluid head-color">
       <div id="myDivId"><br></div>
       <div class = "row" >
         <div class = "col-md-3 logo"> 
-          <span><img class = "pull-left au" src = "assets/anna.png" height = "50px"/></span>
+          <span><img class = "pull-left au" src = "/assets/anna.png" height = "50px"/></span>
         </div>
         <div class = "col-md-6">
           <center>
-            <img   height = "80px" src = "assets/CEG.png" />
-            <span class = "head1">College of Engineering, Guindy Anna University</span>
+            <img class="head-img"  height = "125px" src = "/assets/CEG.png" />
+            <div class="head-div">
+              <h2>College of Engineering Guindy</h2>
+              <h5>Anna University, Chennai</h5>
+            </div>
           </center>
         </div>
-        <div class ="col-md-3">
+        <div class ="col-md-3 ver">
           <form class="navbar-form pull-right" role="search">
           <div class="form-group">
-            <input class="form-control" type="text">
+            <input class="form-control" type="text" placeholder="type for search">
           </div> 
           <button type="submit" class="btn btn-default">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -87,6 +70,7 @@ nanobar.go(100);
       </div>
       </div>
   </div>
+  <div class="footer-line"> </div>
     
       <nav class="navbar navbar-default sticky col-md-12 nav_markup" role="navigation">
         <div class="navbar-header">
@@ -100,31 +84,54 @@ nanobar.go(100);
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active">
-              <a href="#">HOME</a>
+              <%= link_to 'Home', welcome_index_path %>
             </li>
             
             <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<strong class="caret"></strong></a>
+               <a href="#" >About Us<strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#">Profile</a>
                 </li>
                 <li>
-                  <a href="#">About Us</a>
+                  <a href="#">History</a>
                 </li>
                 <li>
-                  <a href="#">Mission and Vision</a>
+                  
+                  <%= link_to 'Mission and Vision', about_mission_path %>
                 </li>
                 
                 </li>
                 <li>
-                  <a href="#">Board of Directors and Executive Staff</a>
+                  
+                  <%= link_to 'Board of Directors and Executive Staff', about_board_path %>
+
                 </li>
                 
               </ul>
             </li>
             <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission<strong class="caret"></strong></a>
+               <a href="#" >Academics<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                  
+                  <%= link_to 'Departments & Centres', acadamics_dept_path %>
+                </li>
+
+
+                <li>
+                  <a href="#">Courses Offered</a>
+                </li>
+
+                <li>
+                  <a href="#">Curriculum and Syllabi</a>
+                </li>
+                
+                
+              </ul>
+            </li>
+            <li class="dropdown">
+               <a href="#" >Admission<strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#">Postgraduation</a>
@@ -134,77 +141,167 @@ nanobar.go(100);
                 <li>
                   <a href="#">Undergraduation</a>
                 </li>
+
+                <li>
+                  <a href="#">NRI/Foreign National</a>
+                </li>
+                
+                
+              </ul>
+            </li>
+            
+            <li class="dropdown">
+               <a href="#" >Campus Life<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Student Services</a>
+                </li>
+
+
+                <li>
+                  <a href="#">Facilities</a>
+                </li>
+
+                <li>
+                  <a href="#">Festivals</a>
+                </li>
+                <li>
+                  <a href="#">Clubs and Societies</a>
+                </li>
+                <li>
+                  <a href="#">Sports</a>
+                </li>
+                <li>
+                  <a href="#">Institutional Social Responsibility Programs</a>
+                </li>
+                <li>
+                  <a href="#">Accomodation</a>
+                </li>
                 
                 
               </ul>
             </li>
             <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments<strong class="caret"></strong></a>
+               <a href="#" >Research<strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#">Faculty of Civil Engineering</a>
-                </li>
-                <li>
-                  <a href="#">Faculty of Mechanical Engineering</a>
-                </li>
-                <li>
-                  <a href="#">Faculty of Electrical and Electronics Engineering</a>
-                </li>
-                <li>
-                  <a href="#">Faculty of Information and Communication Engineering</a>
-                </li>
-                <li>
-                  <a href="#">Faculty of Management Sciences</a>
-                </li>
-                <li>
-                  <a href="#">Faculty of Science and Humanities</a>
+                  <a href="#">Doing Research in CEG</a>
                 </li>
 
 
-                
+                <li>
+                  <a href="#">Center for Research</a>
+                </li>
+
+                <li>
+                  <a href="#">Departmental Research</a>
+                </li>
+                <li>
+                  <a href="#">Library</a>
+                </li>
                 
                 
               </ul>
             </li>
             <li>
-              <a href="#">Campus Life</a>
+              <a href="#">Scholarships</a>
             </li>
             <li>
-              <a href="#">Research</a>
+              <a href="#">Faculty</a>
             </li>
             <li>
-              <a href="#">Alumni</a>
+              <a href="http://cegam.in/" target="_blank">Alumni</a>
             </li>
             <li>
-              <a href="#">Students</a>
+              <a href="http://acoe.annauniv.edu/student/" target="_blank">Student Login</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#">Contact details</a>
             </li>
             <li class="dropdown">
               <a class="dropdown-toggle" href="#"><strong class="caret"></strong>Login</a>
             <ul class="dropdown-menu">
             <li><% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
-</li>
-<li>
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
-<li>
+              Logged in as <strong><%= current_user.email %></strong>.
+              <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+            </li>
+            <li>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            <% else %>
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
+            <li>
 
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-</li>
+              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+            <% end %>
+            </li>
           </ul> 
           </li>  
         </div>
       </nav>
-
+<!--
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
+-->
 <%= yield %>
+<div id="footer">
+      <div class="footer-line"> </div>
+      <div class="footer-con">
+        <div class="row ">
+          <div class="col-md-4 foot-het">
+            <div class="col-md-8 foot-het">
+              <center class="foot-div">
+                <%= link_to 'About Us', about_profile_path %><br>
+                <%= link_to 'Academics', acadamics_dept_path %><br>
+                <a href="#">Admission</a>
+              </center>
+            </div>
+            <div class="col-md-4 foot-het foot-bor">
+              <center class="foot-div">
+                <a href="#">Campus Life</a><br>
+                <a href="#">Research</a><br>
+                <a href="#">Scholarships</a>
+              </center>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <center><img class = "" src = "/assets/ceg2.png" height = "200px"/></center>
+          </div>
+          <div class="col-md-4 foot-het">
+            <div class="col-md-4 foot-het foot-bor">
+              <center class="foot-div">
+                <a href="#">Faculty</a><br>
+                <a href="#">Alumni</a><br>
+                <a href="#">Student Login</a>
+              </center>
+            </div>
+            <div class="col-md-8 foot-het">
+            
+              <div class="foot-div" style="text-align: left; color: white;padding-left: 30px">
+                College of Engineering Guindy<br>
+                12, Sardar Patel Rd, Guindy<br>
+                Chennai, Tamil Nadu 600025
+              </div>
+                
+            
+            </div>
+          </div>
+        </div>
+        <div class="inner-foot-line"></div>
+        <center>
+          <img class = "" src = "/assets/fb_white.png" height = "50px"/>
+          <img class = "" style="padding-top:5px" src = "/assets/google-plus_white.png" height = "50px"/>
+          <img class = "" src = "/assets/linkedin_white.png" height = "30px"/>
+          <img class = "" src = "/assets/twitter_white.png" height = "50px"/>
+          <img class = "" src = "/assets/wiki_white.png" height = "50px"/>
+          
+        </center>
+        <center><p class="text-muted credit pad-bot">Copyrights 2015, College of Engnineering Guindy</p></center>
+      </div>
+
+</div>
+<div class="footer-line"> </div>
+
+
 
 </body>
 </html>

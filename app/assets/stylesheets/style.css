@@ -3,9 +3,11 @@ body{
 }
 
 .logo{
-	height: 75px;
-	padding: 5px 20px;
+	position: relative;
+	height: 100%;
+	padding: 15px 20px;
 	text-align: center;
+	vertical-align: middle;
 }
 
 .inner_head{
@@ -16,6 +18,9 @@ body{
 
 }
 
+.head-color{
+	background-color: #F5F5F5;
+}
 .head1{
 
 	font-size: 20px;
@@ -23,6 +28,22 @@ body{
 
 }
 
+.head-img{
+	display: inline;
+}
+
+.head-div{
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.ver{
+	position: relative;
+	vertical-align: middle;
+	height: 100%;
+	padding: 15px 20px;
+}
 .sticky{
 	position: -webkit-sticky;
 	position: -moz-sticky;
@@ -35,12 +56,14 @@ body{
 
 
 .iconn{
-	height: 60px;
-	vertical-align: center;
-	padding-bottom: 20px;
+	height: 75px;
+	vertical-align: middle;
+	padding-bottom: 30px;
 }
 
 .au{
+	vertical-align: middle;
+	position: relative;
 	padding-top: 15px;
 }
 
@@ -112,6 +135,7 @@ body{
 
 .first_but{
 	border-top: none;
+	
 	border-radius: 0px;
 
 }
@@ -176,15 +200,9 @@ body{
 
 .quick-links li{
 	padding: 5px;
-	color:#2dcc6f;
-}
-.quick-links li:nth-child(odd){
-	background: #CCC;
+	color: orange;
 }
 
-.quick-links li:nth-child(even){
-	background: #FFF;
-}
 
 .quick-links a{
 	text-decoration: none;
@@ -208,6 +226,10 @@ body{
 	color: #859094;
 }
 
+tr{
+	border-left: 5px solid white;
+
+}
 tr:hover{
 	border-left: 5px solid #8f44ad;
 }
@@ -226,6 +248,7 @@ tr:hover{
 	padding-top: 30px;
 	margin-bottom: 30px;
 	
+	
 
 }
 
@@ -233,7 +256,15 @@ tr:hover{
 	padding-bottom: 20px;
 	position: relative;
 }
-
+.ii{
+	position: absolute;
+	height: 100px;
+	width: 300px;
+	top: 20px;
+	left: 15px;
+	opacity: 0.0;
+	z-index: 20;
+}
 .img_overlay{
 	position: absolute;
 	height: 100px;
@@ -247,19 +278,32 @@ tr:hover{
 	vertical-align: middle;
 	color: white;
 	overflow: hidden;
+	-webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 
 	
 }
 
-.img_overlay:hover{
-	position: absolute;
-	height: 200px;
-	width: 300px;
-	bottom: 20px;
-	left: 15px;
-	background-color: #1fb298;
-	opacity: 0.7;
-	z-index: 20;
+.bg-link:hover .ii{
+	
+	height: 0px;
+	
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+	
+}
+.bg-link:hover .img_overlay{
+	
+	transform: translateY(-100px);
+		-webkit-transform:translateY(-100px);
+		-moz-transform:translateY(-100px);
+		-ms-transform:translateY(-100px);
+		-o-transform:translateY(-100px);
+	
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
@@ -301,13 +345,13 @@ tr:hover{
 
 #footer {
 	margin-top: 30px;
-  	height: 100px;
-  	background-color: #f5f5f5;
+  	height: 400px;
+  	background-color: #7b0708;
 }
 .footer-line{
 	height: 5px;
 	width:100%;
-	background-color: #34495e;
+	background-color: orange;
 
 }
 
@@ -317,3 +361,110 @@ tr:hover{
 	padding-left: 30px;
 }
 
+.foot-div{
+	vertical-align: middle;
+	height: 100%;
+	position: relative;
+}
+.foot-div a{
+	text-decoration: none;
+	color: white;
+}
+
+.foot-het{
+	padding-top: 30px;
+	position: relative;
+	vertical-align: middle;
+	height: 150px;
+}
+.foot-img{
+	vertical-align: middle;
+	height: 220px;
+
+
+}
+.foot-img a{
+	text-decoration: none;
+	color: white;
+}
+
+.foot-bor{
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+
+.inner-foot-line{
+	margin: 20px 10%;
+	height: 1px;
+	width: 80%;
+	background-color: white;
+}
+
+.pad-bot{
+	padding-bottom: 0px;
+}
+
+---------------------------------------
+.top-padd{
+	margin-top: 50px;
+}
+
+.top-padd h2{
+	color: brown;
+}
+
+.top-padd p{
+	color: grey;
+}
+
+.top-padd a{
+	text-decoration: none;
+	color: brown;
+	font-size: 20px;
+}
+
+.pers{
+	color: grey;
+	font-size: 20px;
+
+}
+
+.desig{
+	color: brown;
+	font-size: 20px;
+
+}
+
+.cir{
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: orange;
+}
+.ghost{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 5px;
+	height: 100%;
+	background-color: white;
+}
+
+
+.cus-but:hover .ghost{
+	background-color: brown;
+	
+	
+}
+.cus-but{
+	padding-left: 50px;
+}
+
+.cus-but:focus .ghost{
+	background-color: brown;
+	
+	
+}

@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'about/mission'
+
+  get 'about/profile'
+
+  get 'about/history'
+
+  get 'about/board'
+
+  get 'acadamics/dept'
+
+  get 'acadamics/course'
+
+  get 'acadamics/curr'
+
+  resources :dept_faculs
+  resources :faculties
   resources :studentnews
   resources :staffnews
   resources :researches
