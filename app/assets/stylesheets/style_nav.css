@@ -50,8 +50,8 @@
 }
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
-  color: #ffffff;
-  background-color: #7b0708;
+  color: black;
+  background-color: #DC8615;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
   background-color: #7b0708;
