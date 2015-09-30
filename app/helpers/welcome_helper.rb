@@ -1,9 +1,12 @@
+
+
 require 'rss/1.0'
 require 'rss/2.0'
 require 'open-uri'
  
 module WelcomeHelper
-   
+  
+  
   def blog_feed
     source = "http://guindytimes.com/rss?format=rss" # url or local file
     content = "" # raw content of rss feed will be loaded here
@@ -17,4 +20,6 @@ module WelcomeHelper
     end 
     html
   end
+  
+
 end

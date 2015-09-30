@@ -89,7 +89,7 @@ nanobar.go(100);
             </li>
             
             <li class="dropdown">
-               <a href="#" >About Us<strong class="caret"></strong></a>
+               <a href="#" >About Us</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#">Profile</a>
@@ -112,7 +112,7 @@ nanobar.go(100);
               </ul>
             </li>
             <li class="dropdown">
-               <a href="#" >Academics<strong class="caret"></strong></a>
+               <a href="#" >Academics</a>
               <ul class="dropdown-menu">
                 <li>
                   
@@ -132,7 +132,7 @@ nanobar.go(100);
               </ul>
             </li>
             <li class="dropdown">
-               <a href="#" >Admission<strong class="caret"></strong></a>
+               <a href="#" >Admission</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#">Postgraduation</a>
@@ -152,7 +152,7 @@ nanobar.go(100);
             </li>
             
             <li class="dropdown">
-               <a href="#" >Campus Life<strong class="caret"></strong></a>
+               <a href="#" >Campus Life</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#">Student Services</a>
@@ -183,7 +183,7 @@ nanobar.go(100);
               </ul>
             </li>
             <li class="dropdown">
-               <a href="#" >Research<strong class="caret"></strong></a>
+               <a href="#" >Research</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#">Doing Research in CEG</a>
@@ -220,11 +220,12 @@ nanobar.go(100);
               <a href="#">Contact details</a>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle" href="#"><strong class="caret"></strong>Login</a>
+              <a class="dropdown-toggle" href="#">Login</a>
             <ul class="dropdown-menu">
             <li><% if user_signed_in? %>
-              Logged in as <strong><%= current_user.email %></strong>.
-              <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+              <li>Logged in as </li>
+              <li><strong><%= current_user.email %></strong>.</li>
+              <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
             </li>
             <li>
               <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
