@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :galleries
   get 'about/mission'
 
   get 'about/profile'
