@@ -44,9 +44,11 @@
               </div>
             </div>
           </div> 
-        </div>
+          <a class="left carousel-control over-top" href="#carousel-834021" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <a class="right carousel-control over-top" href="#carousel-834021" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
         <br>
-  <div class="container">
+  <div class="container top-padd">
     <div class="row first_row">
       <div class="col-md-4">
         <center>
@@ -80,17 +82,12 @@
             Get Your Newsletter
           </h2>
         </center>
-        <form role="form col-md-6 col-md-offset-3" style="width: 66%;margin-left: 17%">
-          
-             
-            
-          <input class="form-control" id="exampleInputEmail1" type="email">
-          
-          
-          
-          <button type="submit" class="btn btn-default form-control sub_but">
-            Subscribe!
-          </button>
+        <form role="form col-md-6 col-md-offset-3" style="width: 66%;margin-left: 17%">   
+          <a href="/galleries">     
+            <button  class= "btn btn-default form-control sub_but">
+              Subscribe!
+            </button>
+          </a>
         </form>
       </div>
     </div>
@@ -116,9 +113,15 @@
                   </div>
                 </div>
                 <div class="list-group but-grp">
-                <button type="button" class="list-group-item first_but"><%= raw(@staffnews.first.stnews) %></button>
-                  <% @staffnews.where.not(id: @staffnews.first.id).each do |stnews| %>
-                    <button type="button" class="list-group-item "><%= raw(stnews.stnews) %></button>
+                <button type="button" class="list-group-item first_but cus-but">
+                  <span class="ghost"></span>
+                  <%= raw(@staffnews.first.stnews) %>
+                </button>
+                <% @staffnews.where.not(id: @staffnews.first.id).each do |stnews| %>
+                  <button type="button" class="list-group-item cus-but">
+                    <span class="ghost"></span>
+                    <%= raw(stnews.stnews) %>
+                  </button>
                   <% end %>
                 </div>
                 <p>
@@ -149,10 +152,16 @@
                 <div class="list-group but-grp">
 
                   
-                    <button type="button" class="list-group-item first_but"><%= raw(@studentnews.first.stnews) %></button>
+                    <button type="button" class="list-group-item first_but cus-but">
+                      <span class="ghost"></span>
+                      <%= raw(@studentnews.first.stnews) %>
+                    </button>
                   
                   <% @studentnews.where.not(id: @studentnews.first.id).each do |stnews| %>
-                    <button type="button" class="list-group-item"><%= raw(stnews.stnews) %></button>
+                    <button type="button" class="list-group-item cus-but">
+                      <span class="ghost"></span>
+                      <%= raw(stnews.stnews) %>
+                    </button>
                   <% end %>
                 </div>
                 <p>
@@ -171,11 +180,30 @@
                 <div class="row head-grp">
                 </div>
                 <div class="list-group but-grp">
-                  <button type="button" class="list-group-item"><strong class="caret"></strong> Cras justo odio</button>
-                  <button type="button" class="list-group-item"><strong class="caret"></strong> Dapibus ac facilisis in</button>
-                  <button type="button" class="list-group-item"><strong class="caret"></strong> Morbi leo risus</button>
-                  <button type="button" class="list-group-item"><strong class="caret"></strong> Porta ac consectetur ac</button>
-                  <button type="button" class="list-group-item"><strong class="caret"></strong> Vestibulum at eros</button>
+                  <button type="button" class="list-group-item cus-but">
+                    <span class="ghost"></span>
+                    <strong class="caret"></strong> Cras justo odio
+                  </button>
+
+                  <button type="button" class="list-group-item cus-but">
+                    <span class="ghost"></span>
+                    <strong class="caret"></strong> Cras justo odio
+                  </button>
+
+                  <button type="button" class="list-group-item cus-but">
+                    <span class="ghost"></span>
+                    <strong class="caret"></strong> Cras justo odio
+                  </button>
+
+                  <button type="button" class="list-group-item cus-but">
+                    <span class="ghost"></span>
+                    <strong class="caret"></strong> Cras justo odio
+                  </button>
+                  
+                  <button type="button" class="list-group-item cus-but">
+                    <span class="ghost"></span>
+                    <strong class="caret"></strong> Cras justo odio
+                  </button>
                 </div>
                 <p>
                   <a class="btn" href="#">Show more</a>
@@ -198,6 +226,7 @@
           <a class="btn" href="#">Show more</a>
         </p>
       </div>
+      
     </div>
 
     <div class="row">
@@ -278,15 +307,11 @@
       <div class="col-md-4 bg-link">
       
         <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
-        <div class="img_overlay">
-          <h4>Kurukshetra</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
-          <div class = "rd-more">
-            <button type="submit" class="btn btn-default rd-but">
-            Subscribe!
-            </button>
-
-            
+        <div class="caption">
+          <div class="blur"></div>
+          <div class="caption-text">
+            <h1>Amazing Caption</h1>
+            <p>Whatever It Is - Always Awesome</p>
           </div>
         </div>
       </div>

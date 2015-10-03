@@ -48,11 +48,15 @@
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
   color: #ffffff;
 }
+.navbar-default .navbar-nav > li > .dropdown-menu > li {
+  color: #ffffff;
+}
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
   color: black;
   background-color: #DC8615;
 }
+
 .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
   background-color: #7b0708;
 }
