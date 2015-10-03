@@ -84,12 +84,11 @@ nanobar.go(100);
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active">
+            <li class="<%= "active" if params[:controller] == "welcome" %>">
               <%= link_to 'Home', welcome_index_path %>
             </li>
-            
-            <li class="dropdown">
-               <a href="#" >About Us</a>
+            <li class="dropdown <%= "active" if params[:controller] == "about" %>">
+               <a href="#" >About Us<strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#">Profile</a>
@@ -111,8 +110,8 @@ nanobar.go(100);
                 
               </ul>
             </li>
-            <li class="dropdown">
-               <a href="#" >Academics</a>
+            <li class="dropdown <%= "active" if params[:controller] == "acadamics" %>">
+               <a href="#" >Academics<strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <li>
                   
@@ -208,7 +207,7 @@ nanobar.go(100);
               <a href="#">Scholarships</a>
             </li>
             <li>
-              <a href="#">Faculty</a>
+              <a href="http://adams.aukdc.edu.in:9090/fis/facprofile_campus.php">Faculty</a>
             </li>
             <li>
               <a href="http://cegam.in/" target="_blank">Alumni</a>

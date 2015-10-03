@@ -1,4 +1,46 @@
 Rails.application.routes.draw do
+  get 'admission/ug'
+
+  get 'admission/pg'
+
+  get 'admission/ugprocedure'
+
+  get 'admission/nri'
+
+  get 'admission/nriprocedure'
+
+  get 'admission/pgprocedure'
+
+  get 'campuslife/services'
+
+  get 'campuslife/facilities'
+
+  get 'campuslife/festivals'
+
+  get 'campuslife/clubs'
+
+  get 'campuslife/societies'
+
+  get 'campuslife/sports'
+
+  get 'campuslife/isrp'
+
+  get 'campuslife/hnd'
+
+  get 'research/adminstration'
+
+  get 'research/centres'
+
+  get 'research/irt'
+
+  get 'research/library'
+
+  get 'contact/details'
+
+  get 'contact/team'
+
+  get 'scholar/list'
+
   resources :galleries
   get 'about/mission'
 

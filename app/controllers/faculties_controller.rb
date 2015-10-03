@@ -1,4 +1,5 @@
 class FacultiesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_faculty, only: [:show, :edit, :update, :destroy]
 
   # GET /faculties
