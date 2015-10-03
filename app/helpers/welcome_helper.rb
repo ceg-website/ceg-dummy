@@ -13,7 +13,7 @@ module WelcomeHelper
     rss.items.first(10).each do |i|
     html << "<tr><td class='col-md-1'>GT</td>
               <td class='col-md-7'><span class='auth-name'>#{i.author}</span><span class='topic'><a href='#{i.link}'>#{i.title}</a></span></td>
-              <td class='col-md-3'><span class='glyphicon glyphicon-time' aria-hidden='true' style='padding-right:5px;''></span>#{i.pubDate}{</td></tr>"
+              <td class='col-md-3'><span class='glyphicon glyphicon-time' aria-hidden='true' style='padding-right:5px;''></span>#{i.pubDate.strftime("%d %b, %Y at %I:%M%p")}</td></tr>"
     end 
     html
   end
