@@ -73,7 +73,7 @@ nanobar.go(100);
           <div class="form-group">
             <input class="form-control" type="text" id="q" placeholder="type for search">
           </div> -->
-          <form action="http://google.com/search" method="get" class="navbar-form pull-right" role="search">
+          <form action="http://google.com/search" method="get" class="navbar-form pull-right" role="search" target="_blank">
             <input type="hidden" name="sitesearch" value="http://ceg.annauniv.edu" />
             <input type="text" name="q" class="form-control" type="text" id="q" placeholder="type for search"/>
         
@@ -105,10 +105,10 @@ nanobar.go(100);
                <a href="#" >About Us</a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#">Profile</a>
+                  <a href="/about/profile">Profile</a>
                 </li>
                 <li>
-                  <a href="#">History</a>
+                  <a href="/about/history">History</a>
                 </li>
                 <li>
                   
@@ -134,86 +134,82 @@ nanobar.go(100);
 
 
                 <li>
-                  <a href="#">Courses Offered</a>
+                  <a href="/acadamics/course">Courses Offered</a>
                 </li>
 
                 <li>
-                  <a href="#">Curriculum and Syllabi</a>
+                  <a href="/acadamics/curr">Curriculum and Syllabi</a>
                 </li>
-                
                 
               </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown <%= "active" if params[:controller] == "admission" %>">
                <a href="#" >Admission</a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#">Postgraduation</a>
+                  <a href="/admission/ug">Under graduation</a>
                 </li>
-
-
                 <li>
-                  <a href="#">Undergraduation</a>
+                  <a href="/admission/pg">Post graduation</a>
                 </li>
-
                 <li>
-                  <a href="#">NRI/Foreign National</a>
+                  <a href="/admission/nri">NRI/Foreign National</a>
                 </li>
-                
-                
               </ul>
             </li>
             
-            <li class="dropdown">
+            <li class="dropdown <%= "active" if params[:controller] == "campuslife" %>">
                <a href="#" >Campus Life</a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#">Student Services</a>
+                  <a href="/campuslife/services">Student Services</a>
                 </li>
 
 
                 <li>
-                  <a href="#">Facilities</a>
+                  <a href="/campuslife/facilities">Facilities</a>
                 </li>
 
                 <li>
-                  <a href="#">Festivals</a>
+                  <a href="/campuslife/festivals">Festivals</a>
                 </li>
                 <li>
-                  <a href="#">Clubs and Societies</a>
+                  <a href="/campuslife/clubs">Clubs and Societies</a>
                 </li>
                 <li>
-                  <a href="#">Sports</a>
+                  <a href="/campuslife/sports">Sports</a>
                 </li>
                 <li>
-                  <a href="#">Institutional Social Responsibility Programs</a>
+                  <a href="/campuslife/isrp">Institutional Social Responsibility Programs</a>
                 </li>
                 <li>
-                  <a href="#">Accomodation</a>
+                  <a href="/campuslife/hnd">Accomodation</a>
                 </li>
                 
                 
               </ul>
             </li>
-            <li class="dropdown">
+            <li class="dropdown <%= "active" if params[:controller] == "research" %>">
                <a href="#" >Research</a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#">Doing Research in CEG</a>
+                  <a href="/research/doing">Doing Research in CEG</a>
                 </li>
 
 
                 <li>
-                  <a href="#">Center for Research</a>
+                  <a href="/research/adminstration">Research Administration (Centre for Research)</a>
                 </li>
 
                 <li>
-                  <a href="#">Departmental Research</a>
+                  <a href="/research/centres">Dedicated Research Centres</a>
                 </li>
                 <li>
-                  <a href="#">Library</a>
+                  <a href="/research/irt">Integrated Research & Teaching</a>
                 </li>
-                
+                 <li>
+                  <a href="/research/library">Libraries</a>
+                </li>
                 
               </ul>
             </li>
@@ -221,7 +217,7 @@ nanobar.go(100);
               <a href="#">Scholarships</a>
             </li>
             <li>
-              <a href="http://adams.aukdc.edu.in:9090/fis/facprofile_campus.php">Faculty</a>
+              <a href="http://adams.aukdc.edu.in:9090/fis/facprofile_campus.php" target="_blank">Faculty</a>
             </li>
             <li>
               <a href="http://cegam.in/" target="_blank">Alumni</a>
@@ -229,13 +225,14 @@ nanobar.go(100);
             <li>
               <a href="http://acoe.annauniv.edu/student/" target="_blank">Student Login</a>
             </li>
-            <li>
-              <a href="#">Contact details</a>
+            <li class="<%= "active" if params[:controller] == "contact" %>">
+              <a href="/contact/details">Contact details</a>
             </li>
+            <!--
             <li>
               <a href="#">Projects</a>
             </li>
-            <!--
+            
             <li class="dropdown">
               <a class="dropdown-toggle" href="#">Login</a>
             <ul class="dropdown-menu">

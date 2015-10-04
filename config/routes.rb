@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sitemap/index'
+
   get 'admission/ug'
 
   get 'admission/pg'

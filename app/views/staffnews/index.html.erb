@@ -1,29 +1,44 @@
+
 <p id="notice"><%= notice %></p>
+  
+<div class="container top-pad">
+      <div class="row"> 
+        <div class="col-md-3 top-padd" style="margin-top:50px">
+          <h3>About Us</h3>
+          <div class="list-group"><a href="/  " class="button">
+            <button type="button" class="list-group-item cus-but">
+            <span class="ghost"></span><span class="cir"></span>
+              Back to Home
+            </button>
+            </a>
+            <a href="/about/mission" class="button">
+            <button type="button" class="list-group-item cus-but">
+            <span class="ghost"></span><span class="cir"></span>
+              About CEG 
+            </button>
+          </a>
+            <a href="/studentnews" class="button">
+            <button type="button" class="list-group-item cus-but">
+            <span class="ghost"></span><span class="cir"></span>
+              Student News
+            </button>
+          </a>
+          </div>
+        </div>
+        <div class="col-md-9 top-padd" style="margin-top:50px">
+          <h2>Staff News</h2>
+          <ul class = "quick-links">
+            <% @staffnews.each do |staffnews| %>
+              <li>
+                <span class="desig"><%= raw(staffnews.stnews) %></span>
+              </li>
+            <% end %>
+          </ul>
+      </div>
+      </div>
+      </div></div>
+    </div>
+      
+    
 
-<h1>Listing Staffnews</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Stnews</th>
-      <th>Stid</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @staffnews.each do |staffnews| %>
-      <tr>
-        <td><%= staffnews.stnews %></td>
-        <td><%= staffnews.stid %></td>
-        <td><%= link_to 'Show', staffnews %></td>
-        <td><%= link_to 'Edit', edit_staffnews_path(staffnews) %></td>
-        <td><%= link_to 'Destroy', staffnews, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Staffnews', new_staffnews_path %>
+    
