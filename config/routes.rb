@@ -35,6 +35,8 @@ Rails.application.routes.draw do
 
   get 'research/library'
 
+  get 'research/doing'
+
   get 'contact/details'
 
   get 'contact/team'

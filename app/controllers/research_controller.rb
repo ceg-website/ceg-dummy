@@ -10,4 +10,7 @@ class ResearchController < ApplicationController
 
   def library
   end
+
+  def doing
+  end
 end
