@@ -581,3 +581,37 @@ tr:hover{
 		text-align: center;
 		top:20px;
 	}
+
+
+----------------------------------------------
+.img-container{
+	padding-left: 0px<!important>;
+	margin-left: 0px;
+}
+.galr-pad{
+	
+	padding-bottom: 30px;
+
+}
+.galr-pad img{
+	
+	display: block;
+}
+
+.gallery ul{
+	list-style-type: none;
+}
+
+.galr-head{
+	font-size: 20px;
+	color: grey;
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+	.galr-pad img{
+	
+		width: 200px;
+	}
+    
+}
