@@ -13,6 +13,15 @@
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .foot-het{
+    	display: none;
+    }
+    .foot-logo{
+    	width:100%;
+    }
+}
+
 
 body{
 	height: 100%;
@@ -284,21 +293,20 @@ tr:hover{
 .blog-links{
 	padding-top: 30px;
 	margin-bottom: 30px;
-	position: absolute;
-	bottom: 10px;
+	
 	
 	
 	
 
 }
-.bab-lay{
-	margin-bottom: 500px;
-}
+
 
 .bg-link{
 	padding-bottom: 20px;
 	position: relative;
 	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 .ii{
 	position: absolute;
@@ -312,7 +320,7 @@ tr:hover{
 .img_overlay{
 	position: absolute;
 	height: 100px;
-	width: 300px;
+	width: 301px;
 	
 	bottom: 20px;
 	padding-bottom: 20px;
