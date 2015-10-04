@@ -243,6 +243,7 @@ body{
 .main-img{
 	padding-left: 0px;
 	padding-right: 30%;
+	margin-bottom: 10px;
 	
 }
 
@@ -257,6 +258,10 @@ body{
 	text-decoration: none;
 	color: grey;
 	font-size: 20px;
+}
+.get-grey{
+	color: grey;
+	
 }
 
 .quick-links a:hover{
@@ -297,6 +302,8 @@ tr:hover{
 .blog-links{
 	padding-top: 30px;
 	margin-bottom: 30px;
+	margin-left: 10%;
+	margin-right: 10%;
 	
 	
 	
@@ -345,7 +352,7 @@ tr:hover{
 	
 }
 
-
+/*
 .bg-link:hover .img_overlay{
 	height: 200px;
 	
@@ -357,6 +364,7 @@ tr:hover{
     transition: all 1s ease-in-out;
 	
 }
+*/
 
 .img_overlay h4{
 	font-weight: bold;
@@ -573,3 +581,37 @@ tr:hover{
 		text-align: center;
 		top:20px;
 	}
+
+
+----------------------------------------------
+.img-container{
+	padding-left: 0px<!important>;
+	margin-left: 0px;
+}
+.galr-pad{
+	
+	padding-bottom: 30px;
+
+}
+.galr-pad img{
+	
+	display: block;
+}
+
+.gallery ul{
+	list-style-type: none;
+}
+
+.galr-head{
+	font-size: 20px;
+	color: grey;
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+	.galr-pad img{
+	
+		width: 200px;
+	}
+    
+}
