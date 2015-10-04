@@ -243,6 +243,7 @@ body{
 .main-img{
 	padding-left: 0px;
 	padding-right: 30%;
+	margin-bottom: 10px;
 	
 }
 
@@ -257,6 +258,10 @@ body{
 	text-decoration: none;
 	color: grey;
 	font-size: 20px;
+}
+.get-grey{
+	color: grey;
+	
 }
 
 .quick-links a:hover{
@@ -347,7 +352,7 @@ tr:hover{
 	
 }
 
-
+/*
 .bg-link:hover .img_overlay{
 	height: 200px;
 	
@@ -359,6 +364,7 @@ tr:hover{
     transition: all 1s ease-in-out;
 	
 }
+*/
 
 .img_overlay h4{
 	font-weight: bold;
