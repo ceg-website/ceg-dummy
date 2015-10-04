@@ -1,14 +1,43 @@
 <p id="notice"><%= notice %></p>
+  
+<div class="container top-pad">
+      <div class="row"> 
+        <div class="col-md-3 top-padd" style="margin-top:50px">
+          <h3>About Us</h3>
+          <div class="list-group"><a href="/  " class="button">
+            <button type="button" class="list-group-item cus-but">
+            <span class="ghost"></span><span class="cir"></span>
+              Back to Home
+            </button>
+            </a>
+            <a href="/about/mission" class="button">
+            <button type="button" class="list-group-item cus-but">
+            <span class="ghost"></span><span class="cir"></span>
+              About CEG 
+            </button>
+          </a>
+            <a href="/studentnews" class="button">
+            <button type="button" class="list-group-item cus-but">
+            <span class="ghost"></span><span class="cir"></span>
+              Student News
+            </button>
+          </a>
+          </div>
+        </div>
+        <div class="col-md-9 top-padd" style="margin-top:50px">
+          <h2><%= @gallery.title %></h2>
+  
+		<%= image_tag  @gallery.image %>
+          
+          
+<%= link_to 'Back', galleries_path %>
+      </div>
+      </div>
+      </div></div>
+    </div>
+      
+    
 
-<p>
-  <strong>Title:</strong>
-  <%= @gallery.title %>
-</p>
+    
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag  @gallery.image %>
-</p>
-
-<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
 <%= link_to 'Back', galleries_path %>
