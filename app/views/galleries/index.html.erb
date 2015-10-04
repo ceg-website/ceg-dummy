@@ -1,29 +1,94 @@
-<p id="notice"><%= notice %></p>
+<div class="container top-pad">
+      <div class="row"> 
+        <div class="col-md-3 top-padd" style="margin-top:50px">
+          <h3>Gallery</h3>
+          <div class="list-group"><a href="dept" class="button">
+            <button type="button" class="list-group-item cus-but">
+            <span class="ghost"></span>
+            <span class="cir"></span>
+              What to display!!
+            </button>
+            </a>
+            <a href="course" class="button">
+            <button type="button" class="list-group-item cus-but">
+              <span class="ghost"></span>
+              <span class="cir"></span>
+              What to display!!
+            </button>
+            </a>
+            <a href="curr" class="button">
+            <button type="button" class="list-group-item cus-but">
+              <span class="ghost"></span>
+              <span class="cir"></span>
+              What to display!!
+            </button>
+            </a>          
+          </div>
+        </div>
+        <div class="col-md-9 top-padd gallery" style="margin-top:50px">
+          <h2>Gallery</h2>
+          <!--
+          <ul class="img-container">
+            <% @galleries.each do |gallery| %>
+            <li class="col-md-4 col-sm-6 col-xs-12 galr-pad">
+              <center>
+                <%= image_tag gallery.image(:display) %>
+                <span class="galr-head"><%= link_to gallery.title , gallery %></span>
+              </center>
+            </li>
+            <% end %>
+          </ul>
+          -->
 
-<h1>Listing Galleries</h1>
+          <!-- to be deleted -->
+          <ul class="img-container">
+            <li class="col-md-4 col-sm-6 col-xs-12 galr-pad">
+              <center>
+                <img src="http://lorempixel.com/250/150/">
+                <span class="galr-head">Name</span>
+              </center>
+            </li>
+            <li class="col-md-4 col-sm-6 col-xs-12 galr-pad">
+              <center>
+                <img src="http://lorempixel.com/250/150/">
+                <span class="galr-head">Name</span>
+              </center>
+            </li>
+            <li class="col-md-4 col-sm-6 col-xs-12 galr-pad">
+              <center>
+                <img src="http://lorempixel.com/250/150/">
+                <span class="galr-head">Name</span>
+              </center>
+            </li>
+            <li class="col-md-4 col-sm-6 col-xs-12 galr-pad">
+              <center>
+                <img src="http://lorempixel.com/250/150/">
+                <span class="galr-head">Name</span>
+              </center>
+            </li>
+            <li class="col-md-4 col-sm-6 col-xs-12 galr-pad">
+              <center>
+                <img src="http://lorempixel.com/250/150/">
+                <span class="galr-head">Name</span>
+              </center>
+            </li>
+            <li class="col-md-4 col-sm-6 col-xs-12 galr-pad">
+              <center>
+                <img src="http://lorempixel.com/250/150/">
+                <span class="galr-head">Name</span>
+              </center>
+            </li>
+          </ul>
+          <!-- to be deleted -->
+          
+        </div>
+      </div>
+      
+</div>
+      
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @galleries.each do |gallery| %>
-      <tr>
-        <td><%= gallery.title %></td>
-        <td><%= image_tag gallery.image(:thumb) %></td>
-        <td><%= link_to 'Show', gallery %></td>
-        <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
-        <td><%= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Gallery', new_gallery_path %>
+
+

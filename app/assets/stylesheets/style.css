@@ -1,3 +1,28 @@
+@media only screen and (max-width: 1100px) {
+    .logo {
+        display: none;
+        
+    }
+
+    .ver {
+        display: none;
+        
+    }
+    .miid{
+    	width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .foot-het{
+    	display: none;
+    }
+    .foot-logo{
+    	width:100%;
+    }
+}
+
+
 body{
 	height: 100%;
 }
@@ -18,6 +43,11 @@ body{
 
 }
 
+.miid{
+	margin-left: auto<!important>;
+	margin-right: auto<!important>;
+}
+
 .head-color{
 	background-color: #F5F5F5;
 }
@@ -30,6 +60,8 @@ body{
 
 .head-img{
 	display: inline;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .head-div{
@@ -37,7 +69,10 @@ body{
 	text-align: center;
 	vertical-align: middle;
 }
+.head-div h2{
+	font-weight: bold;
 
+}
 .ver{
 	position: relative;
 	vertical-align: middle;
@@ -66,7 +101,11 @@ body{
 	position: relative;
 	padding-top: 15px;
 }
-
+.bab{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
 .first_row{
 	padding-top: 50px;
 }
@@ -97,7 +136,9 @@ body{
 	z-index: 10;
 } 
 
-
+.car_in{
+	width: 100%;
+}
 .cap_markup{
 
 	position: absolute;
@@ -113,7 +154,9 @@ body{
 	bottom: 5px;
 	z-index: 25;
 }
-
+.iimg{
+	width: 100%;
+}
 .carousel-indicators li {
     display: inline-block;
     width: 5px;
@@ -197,7 +240,12 @@ body{
 	margin-top: 30px;
 }
 
-
+.main-img{
+	padding-left: 0px;
+	padding-right: 30%;
+	margin-bottom: 10px;
+	
+}
 
 
 .quick-links li{
@@ -210,6 +258,10 @@ body{
 	text-decoration: none;
 	color: grey;
 	font-size: 20px;
+}
+.get-grey{
+	color: grey;
+	
 }
 
 .quick-links a:hover{
@@ -250,15 +302,22 @@ tr:hover{
 .blog-links{
 	padding-top: 30px;
 	margin-bottom: 30px;
+	margin-left: 10%;
+	margin-right: 10%;
+	
+	
 	
 	
 
 }
 
+
 .bg-link{
 	padding-bottom: 20px;
 	position: relative;
 	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 .ii{
 	position: absolute;
@@ -272,8 +331,10 @@ tr:hover{
 .img_overlay{
 	position: absolute;
 	height: 100px;
-	width: 300px;
+	width: 301px;
+	
 	bottom: 20px;
+	padding-bottom: 20px;
 	left: 15px;
 	background-color: #1fb298;
 	opacity: 0.7;
@@ -281,7 +342,8 @@ tr:hover{
 	text-align: center;
 	vertical-align: middle;
 	color: white;
-	overflow: hidden;
+	
+	overflow-y: hidden;
 	-webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
@@ -290,23 +352,11 @@ tr:hover{
 	
 }
 
-.bg-link:hover .ii{
-	
-	height: 0px;
-	
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-	
-}
+/*
 .bg-link:hover .img_overlay{
+	height: 200px;
 	
-	transform: translateY(-100px);
-		-webkit-transform:translateY(-100px);
-		-moz-transform:translateY(-100px);
-		-ms-transform:translateY(-100px);
-		-o-transform:translateY(-100px);
+	
 	
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -314,6 +364,7 @@ tr:hover{
     transition: all 1s ease-in-out;
 	
 }
+*/
 
 .img_overlay h4{
 	font-weight: bold;
@@ -349,7 +400,7 @@ tr:hover{
 
 #footer {
 	margin-top: 30px;
-  	height: 400px;
+  	height: 310px;
   	background-color: #7b0708;
 }
 .footer-line{
@@ -379,7 +430,7 @@ tr:hover{
 	padding-top: 30px;
 	position: relative;
 	vertical-align: middle;
-	height: 150px;
+	height: 100px;
 }
 .foot-img{
 	vertical-align: middle;
@@ -406,8 +457,15 @@ tr:hover{
 
 .pad-bot{
 	padding-bottom: 0px;
+	display: inline;
 }
 
+--------------------------------------------------
+@media (min-width: 979px) {
+  .dropup:hover > ul.dropdown-menu {
+    display: block;
+  }
+}
 ---------------------------------------
 .top-padd{
 	margin-top: 50px;
@@ -415,6 +473,10 @@ tr:hover{
 
 .top-padd h2{
 	color: brown;
+}
+
+.top-padd h3{
+	padding-left: 10px;
 }
 
 .top-padd p{
@@ -519,3 +581,37 @@ tr:hover{
 		text-align: center;
 		top:20px;
 	}
+
+
+----------------------------------------------
+.img-container{
+	padding-left: 0px<!important>;
+	margin-left: 0px;
+}
+.galr-pad{
+	
+	padding-bottom: 30px;
+
+}
+.galr-pad img{
+	
+	display: block;
+}
+
+.gallery ul{
+	list-style-type: none;
+}
+
+.galr-head{
+	font-size: 20px;
+	color: grey;
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+	.galr-pad img{
+	
+		width: 200px;
+	}
+    
+}
