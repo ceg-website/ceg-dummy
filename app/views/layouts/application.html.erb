@@ -28,8 +28,18 @@
 
 
 
+    
+  
 
+$(document).resize(function () {
+     var screen = $(window);  
 
+     if (screen.width < 1300) {
+         $( ".logo" ).addClass( "hidden" );
+     } else {
+         $( ".logo" ).removeClass( "hidden" );
+     }
+});
 
 
 var nanobar = new Nanobar( options );
@@ -44,14 +54,14 @@ nanobar.go(100);
 <body>
 
     <div class="container-fluid head-color">
-      <div id="myDivId"><br></div>
+      
       <div class = "row" >
         <div class = "col-md-3 logo"> 
-          <span><img class = "pull-left au" src = "/assets/anna.png" height = "50px"/></span>
+          <span><a href="https://www.annauniv.edu/" target="_blank"><img class = "pull-left au" src = "/assets/anna.png" height = "50px"/></a></span>
         </div>
-        <div class = "col-md-6">
+        <div class = "col-md-6 col-sm-12 miid">
           <center>
-            <img class="head-img"  height = "125px" src = "/assets/CEG_col.png" />
+            <img class="head-img"  height = "120px" src = "/assets/CEG_col.png" />
             <div class="head-div">
               <h2>College of Engineering, Guindy</h2>
               <h5>Anna University, Chennai</h5>
@@ -59,10 +69,14 @@ nanobar.go(100);
           </center>
         </div>
         <div class ="col-md-3 ver">
-          <form action="http://google.com/search" method="get" class="navbar-form pull-right" role="search">
+          <!--<form action="http://google.com/search" method="get" class="navbar-form pull-right" role="search">
           <div class="form-group">
             <input class="form-control" type="text" id="q" placeholder="type for search">
-          </div> 
+          </div> -->
+          <form action="http://google.com/search" method="get" class="navbar-form pull-right" role="search">
+            <input type="hidden" name="sitesearch" value="http://ceg.annauniv.edu" />
+            <input type="text" name="q" class="form-control" type="text" id="q" placeholder="type for search"/>
+        
           <button type="submit" class="btn btn-default">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
           </button>
@@ -88,7 +102,7 @@ nanobar.go(100);
               <%= link_to 'Home', welcome_index_path %>
             </li>
             <li class="dropdown <%= "active" if params[:controller] == "about" %>">
-               <a href="#" >About Us<strong class="caret"></strong></a>
+               <a href="#" >About Us</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#">Profile</a>
@@ -111,7 +125,7 @@ nanobar.go(100);
               </ul>
             </li>
             <li class="dropdown <%= "active" if params[:controller] == "acadamics" %>">
-               <a href="#" >Academics<strong class="caret"></strong></a>
+               <a href="#" >Academics</a>
               <ul class="dropdown-menu">
                 <li>
                   
@@ -218,6 +232,10 @@ nanobar.go(100);
             <li>
               <a href="#">Contact details</a>
             </li>
+            <li>
+              <a href="#">Projects</a>
+            </li>
+            <!--
             <li class="dropdown">
               <a class="dropdown-toggle" href="#">Login</a>
             <ul class="dropdown-menu">
@@ -236,7 +254,7 @@ nanobar.go(100);
             <% end %>
             </li>
           </ul> 
-          </li>  
+          </li> --> 
         </div>
       </nav>
 <!--
@@ -265,7 +283,7 @@ nanobar.go(100);
             </div>
           </div>
           <div class="col-md-4">
-            <center><img class = "" src = "/assets/ceg3.png" height = "250px"/></center>
+            <center><img class = "" src = "/assets/ceg3.png" height = "150px"/></center>
           </div>
           <div class="col-md-4 foot-het">
             <div class="col-md-4 foot-het foot-bor">
@@ -289,14 +307,30 @@ nanobar.go(100);
         </div>
         <div class="inner-foot-line"></div>
         <center>
-          <img class = "" src = "/assets/fb_white.png" height = "50px"/>
-          <img class = "" style="padding-top:5px" src = "/assets/google-plus_white.png" height = "50px"/>
-          <img class = "" src = "/assets/linkedin_white.png" height = "30px"/>
-          <img class = "" src = "/assets/twitter_white.png" height = "50px"/>
-          <img class = "" src = "/assets/wiki_white.png" height = "50px"/>
+          <img class = "" src = "/assets/fb_white.png" height = "40px"/>
+          <img class = "" style="padding-top:5px" src = "/assets/google-plus_white.png" height = "40px"/>
+          <img class = "" src = "/assets/linkedin_white.png" height = "25px"/>
+          <img class = "" src = "/assets/twitter_white.png" height = "40px"/>
+          <img class = "" src = "/assets/wiki_white.png" height = "40px"/>
           
         </center>
-        <center><p class="text-muted credit pad-bot">Copyrights 2015, College of Engnineering Guindy</p></center>
+        
+        <center>
+          <p class="text-muted credit pad-bot">Copyrights 2015, College of Engnineering Guindy</p>
+        </center>
+        <span class="pull-left">Sitemap</span>
+        <div class="dropup pull-right">
+          <span class="" type="button"   aria-haspopup="true" aria-expanded="false">
+            Login
+          </span>
+          <ul class="dropdown-menu" >
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        
       </div>
 
 </div>
