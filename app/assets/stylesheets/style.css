@@ -240,7 +240,11 @@ body{
 	margin-top: 30px;
 }
 
-
+.main-img{
+	padding-left: 0px;
+	padding-right: 30%;
+	
+}
 
 
 .quick-links li{
