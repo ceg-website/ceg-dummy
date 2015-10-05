@@ -132,7 +132,7 @@ body{
 	width:100%; 
 	height:100%;
 	background:#576276;
-	opacity:0.7;
+	opacity:0.6;
 	z-index: 10;
 } 
 
@@ -156,6 +156,7 @@ body{
 }
 .iimg{
 	width: 100%;
+	height: 400px;
 }
 .carousel-indicators li {
     display: inline-block;
@@ -336,7 +337,7 @@ tr:hover{
 	bottom: 20px;
 	padding-bottom: 20px;
 	left: 15px;
-	background-color: #1fb298;
+	background-color: #7b0708;
 	opacity: 0.7;
 	z-index: 20;
 	text-align: center;
@@ -617,4 +618,3 @@ tr:hover{
 }
 
 ------------------------------------------
-
