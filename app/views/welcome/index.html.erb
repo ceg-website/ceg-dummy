@@ -63,10 +63,8 @@
             Today's Thirukural
           </h2>
         </center>
-        <p style="font-size:20px"><strong><center>
-          அகர முதல எழுத்தெல்லாம் ஆதி <br/>
-        பகவன் முதற்றே உலகு
-        </center></strong></p>
+        <p style="font-size:20px"><center>
+ <%= raw(@thirukural.first.cont) %></center></p>
       </div>
       <div class="col-md-4">
         <center>
@@ -75,9 +73,7 @@
           </h2>
         </center>
         <p><center>
-          “Strength does not come from physical capacity.<br/>
-It comes from an indomitable will.”<br/>
-<strong>~ Mahatma Gandhi </strong>
+ <%= raw(@quotes.first.cont) %>
         </center></p>
       </div>
       <div class="col-md-4">

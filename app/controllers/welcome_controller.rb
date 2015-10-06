@@ -3,5 +3,7 @@ class WelcomeController < ApplicationController
 	@articles = Article.order(created_at: :desc).limit(8)
 	@staffnews = Staffnews.order(created_at: :desc).limit(6)
 	@studentnews = Studentnews.order(created_at: :desc).limit(6)
+	@thirukural = Thirukural.order(created_at: :desc).limit(1)
+	@quotes = Quote.order(created_at: :desc).limit(1)
   end
 end
