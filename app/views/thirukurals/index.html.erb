@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Thirukurals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cont</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thirukurals.each do |thirukural| %>
+      <tr>
+        <td><%= thirukural.cont %></td>
+        <td><%= link_to 'Show', thirukural %></td>
+        <td><%= link_to 'Edit', edit_thirukural_path(thirukural) %></td>
+        <td><%= link_to 'Destroy', thirukural, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thirukural', new_thirukural_path %>
