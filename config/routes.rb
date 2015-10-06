@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :quotes
+  resources :thirukurals
   get 'sitemap/index'
 
   get 'admission/ug'

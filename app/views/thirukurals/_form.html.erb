@@ -1,0 +1,21 @@
+<%= form_for(@thirukural) do |f| %>
+  <% if @thirukural.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@thirukural.errors.count, "error") %> prohibited this thirukural from being saved:</h2>
+
+      <ul>
+      <% @thirukural.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cont %><br>
+    <%= f.text_area :cont %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
