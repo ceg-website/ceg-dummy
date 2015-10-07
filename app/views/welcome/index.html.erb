@@ -211,6 +211,7 @@
                   </div>
               </div>
           </div>
+          
     </div>
     <br/><br/>
     <div class="row">
@@ -242,25 +243,31 @@
     </div>
     <div class="blog-links">
 
-      <% @articles.each do |article| %>
-      <div class="col-md-4  col-sm-6 col-xs-12 bg-link">
-        <%= image_tag article.fimage.url(:thumb)%>
-        <div class="img_overlay">
-          <h4><%= article.title %></h4>
-          <p><%= article.sdesc %></p>
-          <div class = "rd-more">
-            <button type="submit" class="btn btn-default rd-but">
-            Subscribe!
-            </button>  
-          </div>
-        </div>
+    <div class="grid row">
+    <% @articles.each do |article| %>
+            <div class="col-md-4">
+              <figure class="effect-oscar">
+                <%= image_tag article.fimage.url(:thumb)%>
+                <figcaption>
+                  <h2>W<%= article.title %></h2>
+                  <p><%= article.sdesc %></p>
+                  <%= link_to 'Read More', article %>
+                </figcaption>     
+              </figure>
+            </div>
     
-      <% end %>
-    
-      </div>      
+      <% end %>        
+    </div>
+
     </div>
     
   </div>
+    <script>
+      // For Demo purposes only (show hover effect on mobile devices)
+      [].slice.call( document.querySelectorAll('a[href="#"') ).forEach( function(el) {
+        el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+      } );
+    </script>
    
   </body>
 </html>
