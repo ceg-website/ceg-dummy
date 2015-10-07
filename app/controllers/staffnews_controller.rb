@@ -1,5 +1,5 @@
 class StaffnewsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_staffnews, only: [:show, :edit, :update, :destroy]
 
   # GET /staffnews

@@ -1,5 +1,5 @@
 class DeptFaculsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_dept_facul, only: [:show, :edit, :update, :destroy]
 
   # GET /dept_faculs

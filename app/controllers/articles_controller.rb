@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	  before_action :authenticate_user!
+	  before_action :authenticate_user!, except: [:show, :index]
 	def new
 	end
 	def create
