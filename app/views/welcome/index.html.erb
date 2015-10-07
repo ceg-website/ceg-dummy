@@ -257,18 +257,20 @@
     <div class="blog-links">
 
       <% @articles.each do |article| %>
-      <div class="col-md-4  col-sm-6 col-xs-12 bg-link">
-        <%= image_tag article.fimage.url(:thumb)%>
+      <div class="col-md-4 col-sm-6 col-xs-12 bg-link">
+        <%= image_tag article.fimage.url(:medium)%>
         <div class="img_overlay">
           <h4><%= article.title %></h4>
           <p><%= article.sdesc %></p>
+          <%= link_to 'Read More', article %>
           <div class = "rd-more">
             <button type="submit" class="btn btn-default rd-but">
             Subscribe!
             </button>  
-          </div>
+          </div>          
+        
         </div>
-    
+    </div>
       <% end %>
     
       </div>      
