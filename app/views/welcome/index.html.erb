@@ -1,6 +1,5 @@
  <div class="carousel slide col-md-12 car_markup" id="carousel-834021" data-ride="carousel">
-          <div class="car_overlay">
-          </div>
+          
           <ol class="carousel-indicators ind_markup">
             <li class="active go" data-slide-to="0" data-target="#carousel-834021">
             </li>
@@ -8,44 +7,51 @@
             </li>
             <li class="go" data-slide-to="2" data-target="#carousel-834021">
             </li>
+            <li class="go" data-slide-to="3" data-target="#carousel-834021">
+            </li>
           </ol>
           <div class="carousel-inner car_in">
             <div class="item active car_in">
               <center>
-              <img alt="Carousel Bootstrap First" src="/assets/header2.jpg" class="iimg">
+              <img alt="Carousel Bootstrap First" src="/assets/slider/slider_kp.jpg" class="iimg">
+              <div class="car_overlay"></div>
               <div class="carousel-caption cap_markup">
                 <h4>
-                  First Thumbnail label
+                  Excellence beyond knowledge
                 </h4>
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                </p>
               </div>
               </center>
             </div>
             <div class="item">
               <center>
-              <img alt="Carousel Bootstrap Second" src="/assets/header2.jpg" class="iimg">
+              <img alt="Carousel Bootstrap Second" src="/assets/slider/slider_red.jpg" class="iimg">
+              <div class="car_overlay"></div>
               <div class="carousel-caption cap_markup">
                 <h4>
-                  Second Thumbnail label
+                 Staying true to the winning tradition 
                 </h4>
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                </p>
               </div>
               </center>
             </div>
             <div class="item">
               <center>
-              <img alt="Carousel Bootstrap Third" src="/assets/header4.jpg" class="iimg">
+              <img alt="Carousel Bootstrap Third" src="/assets/slider/slider_redbldg.jpg" class="iimg">
+              <div class="car_overlay"></div>
               <div class="carousel-caption  cap_markup">
                 <h4>
-                  Third Thumbnail label
+                  Third
                 </h4>
-                <p>
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                </p>
+              </div>
+              </center>
+            </div>
+              <div class="item">
+              <center>
+              <img alt="Carousel Bootstrap Fourth" src="/assets/slider/kalam.jpg" class="iimg">
+              <div class="car_overlay"></div>
+              <div class="carousel-caption cap_markup">
+                <h4>
+                 Staying true to the winning tradition 
+                </h4>
               </div>
               </center>
             </div>
@@ -235,11 +241,13 @@
       </div>
     </div>
     <div class="blog-links">
+
+      <% @articles.each do |article| %>
       <div class="col-md-4  col-sm-6 col-xs-12 bg-link">
-        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
+        <%= image_tag article.fimage.url(:thumb)%>
         <div class="img_overlay">
-          <h4>Kurukshetra</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
+          <h4><%= article.title %></h4>
+          <p><%= article.sdesc %></p>
           <div class = "rd-more">
             <button type="submit" class="btn btn-default rd-but">
             Subscribe!
@@ -247,97 +255,12 @@
           </div>
         </div>
     
-      </div>  
-      <div class="col-md-4  col-sm-6 col-xs-12 bg-link">
-        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
-        <div class="img_overlay">
-          <h4>Kurukshetra</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
-          <div class = "rd-more">
-            <button type="submit" class="btn btn-default rd-but">
-            Subscribe!
-            </button>  
-          </div>
-        </div>
-    
-      </div>  
-      <div class="col-md-4  col-sm-6 col-xs-12 bg-link">
-        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
-        <div class="img_overlay">
-          <h4>Kurukshetra</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
-          <div class = "rd-more">
-            <button type="submit" class="btn btn-default rd-but">
-            Subscribe!
-            </button>  
-          </div>
-        </div>
-    
-      </div>  
-      <div class="col-md-4  col-sm-6 col-xs-12 bg-link">
-        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
-        <div class="img_overlay">
-          <h4>Kurukshetra</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
-          <div class = "rd-more">
-            <button type="submit" class="btn btn-default rd-but">
-            Subscribe!
-            </button>  
-          </div>
-        </div>
-    
-      </div>  
-      <div class="col-md-4  col-sm-6 col-xs-12 bg-link">
-        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
-        <div class="img_overlay">
-          <h4>Kurukshetra</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
-          <div class = "rd-more">
-            <button type="submit" class="btn btn-default rd-but">
-            Subscribe!
-            </button>  
-          </div>
-        </div>
-    
-      </div>  
-      <div class="col-md-4  col-sm-6 col-xs-12 bg-link">
-        <img alt="Bootstrap Image Preview" src="/assets/200.jpeg">
-        <div class="img_overlay">
-          <h4>Kurukshetra</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursu</p>
-          <div class = "rd-more">
-            <button type="submit" class="btn btn-default rd-but">
-            Subscribe!
-            </button>  
-          </div>
-        </div>
+      <% end %>
     
       </div>      
     </div>
     
   </div>
-<!--
-<h1> // Listing articles</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>short desciripton</th>
-<th> IMAGE</th>
-  </tr>
-
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.sdesc %></td>
-      <td><%= image_tag article.fimage.url(:thumb) %></td>
-
-  </tr>
-  <% end %>
-</table>
--->
-    
-
    
   </body>
 </html>

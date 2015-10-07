@@ -115,7 +115,7 @@ nanobar.go(100);
                   <%= link_to 'Mission and Vision', about_mission_path %>
                 </li>
                 
-                </li>
+                
                 <li>
                   
                   <%= link_to 'Board of Directors and Executive Staff', about_board_path %>
@@ -190,7 +190,7 @@ nanobar.go(100);
               </ul>
             </li>
             <li class="dropdown <%= "active" if params[:controller] == "research" %>">
-               <a href="#" >Research</a>
+               <a href="/research/doing" >Research</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="/research/doing">Doing Research in CEG</a>
@@ -198,7 +198,7 @@ nanobar.go(100);
 
 
                 <li>
-                  <a href="https://cfr.annauniv.edu/research/" target="_blank">Research Administration (Centre for Research)</a>
+                  <a href="https://cfr.annauniv.edu/research/" target="_blank">Research Administration</a>
                 </li>
 
                 <li>
@@ -213,8 +213,16 @@ nanobar.go(100);
                 
               </ul>
             </li>
-            <li>
+            <li class= " dropdown <%= "active" if params[:controller] == "scholar" %>">
               <a href="/scholar/list">Scholarships</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="http://ceg.annauniv.edu/Scholarship/List%20of%20Scholarship.pdf" target="_blank">List of Scholarships</a>
+                </li>
+                <li>
+                  <a href="/scholar/list">Scholarship Details   </a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="http://adams.aukdc.edu.in:9090/fis/facprofile_campus.php" target="_blank">Faculty</a>
@@ -259,6 +267,9 @@ nanobar.go(100);
 <p class="alert"><%= alert %></p>
 -->
 <%= yield %>
+<br/>
+<br/>
+<br/>
 <div id="footer">
       <div class="footer-line"> </div>
       <div class="footer-con">
@@ -268,14 +279,16 @@ nanobar.go(100);
               <center class="foot-div">
                 <%= link_to 'About Us', about_profile_path %><br>
                 <%= link_to 'Academics', acadamics_dept_path %><br>
-                <a href="#">Admission</a>
+                <a href="/admission/ug">Admission</a><br>
+                <a href="/campuslife/facilites">Campus Life</a>
               </center>
             </div>
             <div class="col-md-4 foot-het foot-bor">
               <center class="foot-div">
-                <a href="#">Campus Life</a><br>
-                <a href="#">Research</a><br>
-                <a href="#">Scholarships</a>
+                <a href="/research/doing">Research</a><br>
+                <a href="/scholar/list">Scholarships</a><br>
+                <a href="http://adams.aukdc.edu.in:9090/fis/facprofile_campus.php">Faculty</a><br>
+                <a href="http://www.cegam.in">Alumni</a>
               </center>
             </div>
           </div>
@@ -285,9 +298,11 @@ nanobar.go(100);
           <div class="col-md-4 foot-het">
             <div class="col-md-4 foot-het foot-bor">
               <center class="foot-div">
-                <a href="#">Faculty</a><br>
-                <a href="#">Alumni</a><br>
-                <a href="#">Student Login</a>
+                
+                <a href="http://acoe.annauniv.edu/student">Student Login</a><br>
+                <a href="/galleries">Galleries</a><br>
+                <a href="/sitemap/index">SiteMap</a><br>
+                <a href="/contact/details">Contact Us</a>
               </center>
             </div>
             <div class="col-md-8 foot-het">

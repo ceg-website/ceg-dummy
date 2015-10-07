@@ -1,4 +1,9 @@
-@media (max-width: 1150px) {
+.navbar-nav li{
+  font-size: 15px;
+}
+
+
+@media (max-width: 1175px) {
     .navbar-header {
         float: none;
     }
