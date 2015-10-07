@@ -461,7 +461,7 @@ tr:hover{
 }
 
 .foot-het{
-	padding-top: 30px;
+	padding-top: 10px;
 	position: relative;
 	vertical-align: middle;
 	height: 100px;
@@ -722,6 +722,7 @@ tr:hover{
 .grid figure h2 {
 	word-spacing: -0.15em;
 	font-size: 25px;
+	color: white;
 }
 
 
@@ -734,6 +735,7 @@ tr:hover{
 .grid figure p {
 	letter-spacing: 1px;
 	font-size: 10px;
+	color: white;s
 }
 
 
@@ -794,7 +796,7 @@ figure.effect-oscar:hover h2 {
 figure.effect-oscar:hover figcaption::before,
 figure.effect-oscar:hover p {
 	opacity: 1;
-	color: black;
+	color: white;
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
