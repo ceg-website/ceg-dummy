@@ -102,7 +102,7 @@ nanobar.go(100);
               <%= link_to 'Home', welcome_index_path %>
             </li>
             <li class="dropdown <%= "active" if params[:controller] == "about" %>">
-               <a href="#" >About Us</a>
+               <a href="/about/profile" >About Us</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="/about/profile">Profile</a>
@@ -125,7 +125,7 @@ nanobar.go(100);
               </ul>
             </li>
             <li class="dropdown <%= "active" if params[:controller] == "acadamics" %>">
-               <a href="#" >Academics</a>
+               <a href="/acadamics/dept" >Academics</a>
               <ul class="dropdown-menu">
                 <li>
                   
@@ -144,7 +144,7 @@ nanobar.go(100);
               </ul>
             </li>
             <li class="dropdown <%= "active" if params[:controller] == "admission" %>">
-               <a href="#" >Admission</a>
+               <a href="/admission/ug" >Admission</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="/admission/ug">Under graduation</a>
@@ -159,7 +159,7 @@ nanobar.go(100);
             </li>
             
             <li class="dropdown <%= "active" if params[:controller] == "campuslife" %>">
-               <a href="#" >Campus Life</a>
+               <a href="/campuslife/services" >Campus Life</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="/campuslife/services">Student Services</a>
