@@ -1,25 +1,22 @@
-Listing the article
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-<p>
-        <strong> Short Description or subheading or subtitle : </strong>
-        <%= @article.sdesc %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
+<p id="notice"><%= notice %></p>
+  
+<div class="container top-pad">
+      <div class="row"> 
+        <div class="col-md-12 top-padd" style="margin-top:50px">
+
+  <h2><%= @article.title %></h2>
+ <br/>
+
+<strong>Authored By:</strong>  <%= @article.author %><br/>
+<br/>
+
   <%= raw(@article.body) %>
-</p>
-
-<p>
-        <strong> Featured Image : </strong>
-        <%= image_tag @article.fimage.url  %>
-</p>
-
-<p>
-	<strong> Author : </strong>
-	<%= @article.author %>
-</p>
-
+<br/>
+      
+     <center>     
+ <%= link_to 'Back to main page', root_path , class:"btn btn-danger" %>
+  </center>
+      </div>
+      </div>
+      </div>
+      
