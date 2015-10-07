@@ -1,5 +1,5 @@
 class ResearchesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_research, only: [:show, :edit, :update, :destroy]
 
   # GET /researches
