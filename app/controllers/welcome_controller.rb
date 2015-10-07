@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-	@articles = Article.order(created_at: :desc).limit(8)
+	@articles = Article.order(created_at: :desc).limit(6)
 	@staffnews = Staffnews.order(created_at: :desc).limit(6)
 	@studentnews = Studentnews.order(created_at: :desc).limit(6)
 	@thirukural = Thirukural.order(created_at: :desc).limit(1)
